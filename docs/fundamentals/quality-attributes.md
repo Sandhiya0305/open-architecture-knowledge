@@ -55,7 +55,12 @@ There is no universally optimal point. The correct balance depends on business p
 5. Identify architectural decisions that influence each scenario.
 6. Validate assumptions with prototypes, tests, and production measurements.
 
-## Further reading
+## Further Reading & References
 
-- [ISO/IEC 25010 product quality model overview](https://iso25000.com/index.php/en/iso-25000-standards/iso-25010)
-- [Microsoft Azure Architecture Center](https://learn.microsoft.com/en-us/azure/architecture/)
+### Official Standards & Models
+
+- [ISO/IEC 25010:2023 - Product quality model](https://www.iso.org/standard/78176.html) - Published: 2023-11
+
+### Official Documentation & Architecture Guides
+
+- [Azure Architecture Center - Microsoft](https://learn.microsoft.com/en-us/azure/architecture/)

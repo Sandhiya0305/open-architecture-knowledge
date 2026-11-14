@@ -1,84 +1,66 @@
-# Event-driven architecture
+# Event-Driven Architecture
 
-Event-driven architecture (EDA) structures communication around events: records that something meaningful has happened. Producers publish events; interested consumers receive and react to them, often asynchronously.
+## At a Glance
 
-An event describes a fact that has occurred, such as `OrderPlaced`. It is different from a command, which asks a recipient to perform an action.
+Event-driven architecture (EDA) organizes communication around events: records that something meaningful has happened. Producers publish events, and interested consumers receive and react to them, often asynchronously.
 
-## Conceptual structure
+An event such as `OrderPlaced` describes a fact. A command asks a recipient to perform an action.
+
+## The Engineering Challenge
+
+Direct calls can tightly connect a producer to the components that need to react to its work. Events allow producers and consumers to interact through a shared contract, which can reduce direct dependencies and support asynchronous workflows.
+
+## Architecture Blueprint
 
 ```mermaid
 flowchart LR
-    P1[Order service] --> CH[Event channel or broker]
-    P2[Payment service] --> CH
-    CH --> C1[Shipping consumer]
-    CH --> C2[Notification consumer]
-    CH --> C3[Analytics consumer]
+    P[Order service] --> CH[Event channel]
+    CH --> S[Shipping consumer]
+    CH --> N[Notification consumer]
+    CH --> A[Analytics consumer]
 ```
 
-The channel may be a broker, event stream, queue, or another transport. Not every event-driven design requires a centralized broker.
+For example, after an order is placed, separate consumers may arrange shipping, send a notification and update analytics. The producer does not need to coordinate each consumer directly.
 
-## Common components
+The channel may be a broker, queue or event stream. Not every event-driven design needs a centralized broker.
 
-- **Producers:** components that publish events.
-- **Events:** immutable facts with defined meaning and schema.
-- **Channels:** mechanisms that route or retain events.
-- **Consumers:** components that react to events.
-- **Schema and contract management:** rules for compatibility and evolution.
-- **Operational controls:** retries, dead-letter handling, monitoring, replay, and access control where required.
+## Where It Fits
 
-## Common interaction topologies
+EDA can help when multiple components need to react to the same business event, workflows are naturally asynchronous, or producers and consumers need to evolve with less direct coordination.
 
-### Broker topology
+## Trade-offs & Pitfalls
 
-Producers publish events to a channel and consumers subscribe independently. The producer does not need to know which consumers exist. This can support fan-out and loose coupling.
+- Consumers may process events later, so their views of data can temporarily differ.
+- Messages may be delivered more than once; consumers should handle duplicates safely.
+- Ordering guarantees depend on the transport and are often limited in scope.
+- Failed messages need clear retry and recovery policies.
+- Event schemas need compatibility rules as systems evolve.
+- Tracing work across asynchronous components requires observability.
 
-### Mediator or orchestration topology
+Do not assume a broker's delivery guarantee means exactly-once business effects. End-to-end behavior depends on the producer, transport, consumer and any external side effects.
 
-A coordinator controls a multi-step workflow and directs messages to participants. This can make process state and recovery more explicit, but it introduces a central coordination responsibility.
+## Building It in Practice
 
-These topologies solve different problems; neither is universally superior.
+Define event meaning and schemas carefully. Use idempotent consumers where duplicate delivery is possible, and plan how to inspect, retry and recover failed messages. Patterns such as transactional outbox can help coordinate database updates with event publication when that consistency problem exists.
 
-## Benefits
+## When to Reconsider
 
-- Producers and consumers can evolve with less direct knowledge of one another.
-- Multiple consumers can react to the same business event.
-- Asynchronous processing can keep long-running work out of a synchronous request path.
-- Consumers may scale independently when the transport and workload support it.
-- New consumers can sometimes be added without changing the producer.
+For a simple request-response flow that needs immediate consistency, event infrastructure may add more operational and reasoning overhead than value. Start with a simpler interaction model if the team cannot monitor and recover asynchronous workflows.
 
-## Costs and failure modes
+## How It Connects
 
-- Eventual consistency means consumers may temporarily hold different views of state.
-- Delivery can be duplicated; consumers should be idempotent where duplicate processing is possible.
-- Ordering guarantees are usually scoped and transport-specific.
-- Failed messages need retry, quarantine, and recovery policies.
-- Event schemas evolve and can break consumers if compatibility is not managed.
-- Tracing a workflow across asynchronous boundaries requires correlation and observability.
-- Replay can repeat side effects unless consumers and external operations are designed for it.
+Event-driven communication can be used inside a modular monolith, between microservices or alongside a layered application. It is a communication approach, not necessarily a deployment style.
 
-## Delivery semantics
+## Scope Note
 
-Do not assume exactly-once business effects merely because a broker advertises a delivery guarantee. End-to-end outcomes depend on producer persistence, transport behavior, consumer processing, acknowledgement, and side effects.
+EDA does not universally improve latency, throughput or availability. Outcomes depend on the workload, transport, implementation and operating environment.
 
-Common practical designs use at-least-once delivery with idempotent consumers. The transactional outbox pattern can help coordinate a database update with event publication; inbox or deduplication records can help consumers handle repeated delivery.
+## Further Reading & References
 
-## When it fits
+### Official Documentation & Architecture Guides
 
-EDA is useful when multiple subsystems need to react to the same facts, workflows are naturally asynchronous, producers and consumers need temporal decoupling, or event streams are a core part of the domain.
+- [Event-driven architecture style - Microsoft](https://learn.microsoft.com/en-us/azure/architecture/guide/architecture-styles/event-driven) - Updated: 2026-03-07
 
-## When it may not fit
+### Engineering Publications & Essays
 
-For a simple request-response workflow with strict immediate consistency, an event broker may add unnecessary operational and reasoning overhead. If the team cannot monitor, retry, inspect, and recover asynchronous workflows, start with a simpler interaction model.
-
-## Relationship to other styles
-
-Event-driven communication can be used inside a modular monolith, between microservices, or in a layered application. It is a communication and coordination approach, not necessarily a deployment topology.
-
-## Evidence status
-
-This page explains architectural properties and trade-offs. It does not claim that EDA universally improves latency, throughput, or availability.
-
-## References
-
-- [Microsoft: Event-driven architecture style](https://learn.microsoft.com/en-us/azure/architecture/guide/architecture-styles/event-driven)
-- [Martin Fowler: What do you mean by “Event-Driven”?](https://martinfowler.com/articles/201701-event-driven.html)
+- [What do you mean by Event-Driven? - Martin Fowler](https://martinfowler.com/articles/201701-event-driven.html) - Published: 2017-02-07

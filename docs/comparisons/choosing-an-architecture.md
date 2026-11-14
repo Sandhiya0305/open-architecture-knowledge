@@ -1,8 +1,10 @@
 # Choosing an architecture
 
+## At a Glance
+
 Architecture selection is a context-dependent decision. The goal is not to choose the most sophisticated style; it is to meet the system's important requirements with acceptable complexity and operational cost.
 
-## A first-pass comparison
+## Quick Comparison
 
 | Concern | Layered application | Modular monolith | Microservices | Event-driven approach |
 |---|---|---|---|---|
@@ -15,7 +17,7 @@ Architecture selection is a context-dependent decision. The goal is not to choos
 
 This table is a qualitative orientation, not a benchmark or universal ranking. Real systems vary significantly.
 
-## Practical decision signals
+## Where Each Approach Fits
 
 ### Start with a layered application when
 
@@ -37,7 +39,7 @@ Multiple components need to react to facts asynchronously, producers and consume
 
 Business policy should remain independent from frameworks and infrastructure. This can be applied within a layered application or individual modules of a monolith or service.
 
-## Questions to ask before choosing
+## Decision Checklist
 
 1. What business capabilities and invariants must the system protect?
 2. Which changes need to be independent of one another?
@@ -48,17 +50,19 @@ Business policy should remain independent from frameworks and infrastructure. Th
 7. What is the simplest structure that meets the measured requirements?
 8. Which assumptions should be tested before committing?
 
-## A sensible evolutionary path
+## Evolving the Architecture
 
 A system can begin as a layered application, establish modular boundaries as the domain grows, and extract a service only when a concrete need justifies a distributed boundary. Event-driven integration can be introduced for workflows that benefit from asynchronous processing.
 
 This is not a mandatory maturity ladder. Some systems should remain simple for their entire lifetime. Evolution should respond to evidence and changing constraints, not fashion.
 
-## Important caution about performance claims
+## Performance Claims Need Evidence
 
 Architecture labels do not determine performance. A meaningful comparison needs the same or clearly described workload, hardware, environment, software versions, implementation details, measurement method, results, and date. Without that information, OAI will not rank styles by speed or scalability.
 
-## Further reading
+## Further Reading & References
 
-- [Microsoft: Architecture styles](https://learn.microsoft.com/en-us/azure/architecture/guide/architecture-styles/)
-- [AWS Well-Architected: Choose how to segment your workload](https://docs.aws.amazon.com/wellarchitected/2024-06-27/framework/rel_service_architecture_monolith_soa_microservice.html)
+### Official Documentation & Architecture Guides
+
+- [Architecture styles - Microsoft](https://learn.microsoft.com/en-us/azure/architecture/guide/architecture-styles/) - Updated: 2025-10-14
+- [Choose how to segment your workload - AWS Well-Architected](https://docs.aws.amazon.com/wellarchitected/2024-06-27/framework/rel_service_architecture_monolith_soa_microservice.html)

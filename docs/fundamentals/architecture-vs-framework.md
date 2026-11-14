@@ -64,7 +64,12 @@ Likewise, adopting an architecture label does not prove that the implementation 
 - Which quality attributes matter most?
 - Which constraints come from the team, budget, runtime, or operating environment?
 
-## Further reading
+## Further Reading & References
 
-- [Microsoft Azure Architecture Center: Architecture styles](https://learn.microsoft.com/en-us/azure/architecture/guide/architecture-styles/)
-- [Martin Fowler: Inversion of Control](https://martinfowler.com/articles/injection.html)
+### Official Documentation & Architecture Guides
+
+- [Architecture styles - Microsoft](https://learn.microsoft.com/en-us/azure/architecture/guide/architecture-styles/)
+
+### Engineering Publications & Essays
+
+- [Inversion of Control Containers and the Dependency Injection pattern - Martin Fowler](https://martinfowler.com/articles/injection.html) - Published: 2004-01-23

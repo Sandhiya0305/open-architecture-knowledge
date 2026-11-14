@@ -1,59 +1,71 @@
 # Contributing
 
-OAI is a curated reference, not an unreviewed feed of generated summaries. Contributions should improve accuracy, traceability, and practical decision-making.
+Help make architecture knowledge clearer, more useful and easier to verify. Contributions should improve a reader's understanding or help them make a better engineering decision.
 
-## Before proposing a change
+## Writing style
 
-1. Identify the architecture concept and distinguish it from frameworks, libraries, and deployment products.
-2. Prefer primary sources: specifications, official documentation, source repositories, and reproducible research.
-3. Record source URLs and publication or retrieval dates for time-sensitive claims.
-4. Separate established principles from adoption signals and empirical measurements.
-5. Do not infer runtime performance from stars, downloads, mentions, or popularity.
-6. Explain why the change improves the reader's ability to understand or make a decision.
+- Keep explanations concise and use plain, precise language.
+- Explain technical terms when readers may not know them.
+- Focus on the concept and the engineering problem it addresses.
+- Use a diagram, analogy, code sample or practical example only when it genuinely clarifies the subject.
+- Do not add sections merely to fill a template. Remove sections that do not add value.
+- Explain meaningful trade-offs. Avoid presenting any pattern as a universal solution.
+- Avoid promotional language and unsupported claims.
 
-## Architecture page checklist
+## Suggested article flow
 
-- Clear definition and scope.
-- Core characteristics and common variants.
-- Conceptual structure or diagram where useful.
-- Benefits and trade-offs.
-- Failure modes and warning signs.
-- Appropriate and inappropriate use cases.
-- Relationships to other styles.
-- Source links for factual or time-sensitive statements.
-- Explicit evidence limitations.
+Use the [reusable article template](https://github.com/Sandhiya0305/open-architecture-knowledge/blob/main/templates/architecture-article-template.md) as a starting point. These sections are guidance, not a mandatory checklist.
 
-## Evidence requirements
+1. **At a Glance** — a short explanation of the concept.
+2. **The Engineering Challenge** — the problem or constraint behind it.
+3. **Architecture Blueprint** — the main components and how they interact.
+4. **Where It Fits** — suitable scenarios and important constraints.
+5. **Trade-offs & Pitfalls** — costs, limitations and common failure modes.
+6. **Building It in Practice** — implementation guidance or an example when useful.
+7. **Making the Choice** — relevant alternatives and decision criteria.
+8. **Further Reading & References** — the sources used to prepare the article.
 
-For a performance or benchmark claim, include workload, hardware and environment, language/runtime/framework versions, methodology, results and units, measurement date, source, and limitations. If essential methodology is missing, label the claim unverified and do not use it to rank architectures.
+Not every article needs all eight sections. A short, accurate explanation is better than a long article padded with generic content.
 
-## Writing standards
+## Source and accuracy requirements
 
-- Use original wording; do not copy substantial third-party text.
-- Prefer precise, testable statements over promotional language.
-- Explain context and scope.
-- Avoid absolute words such as "always", "never", or "fastest" unless the statement is strictly justified.
-- Use tables for concise comparisons, not as a substitute for explanation.
-- Keep diagrams conceptual and label assumptions.
+- Cite sources that were actually consulted and that support the statements being made.
+- Prefer original research, specifications, official documentation and first-hand engineering case studies.
+- Link important factual or time-sensitive claims to the relevant source where practical.
+- Group references by type, such as Official Documentation, Engineering Publications, Research, Case Studies, or Benchmarks.
+- Include the title, author or organization, direct URL and publication/update date when available.
+- Do not invent references, statistics, quotations, implementations or real-world adoption claims.
+- If sources disagree or evidence is incomplete, state the uncertainty rather than guessing.
+- Use original wording. Do not reproduce substantial third-party text.
 
-## Review and publishing
+## Performance and benchmark claims
 
-- Keep pull requests focused.
-- Preserve historical observations; date-stamp time-sensitive reports.
-- Generated content must be reviewed by a human.
-- Do not automatically merge generated changes.
-- Run the documentation build before requesting review.
+Popularity, stars, downloads, mentions and adoption signals are not performance measurements.
 
-## Local preview
+A performance claim needs enough context to be interpreted: workload, hardware and environment, software versions, methodology, results and units, measurement date, source and limitations. If essential details are missing, label the claim unverified or leave it out. Do not rank architectures using unsupported performance claims.
 
-Install the documentation dependencies and start the local server:
+## Review checklist
+
+Before opening a pull request, check that:
+
+- The article explains a real concept accurately.
+- Each section contributes useful information.
+- Examples and diagrams are correct and necessary.
+- Trade-offs are represented fairly.
+- References support the content and are grouped clearly.
+- Uncertainty and evidence limitations are visible.
+- No generated claim is treated as fact without human review.
+
+## Preview locally
+
+Install dependencies and run the documentation site:
 
 ```bash
 python -m pip install -r requirements.txt
 mkdocs serve
 ```
 
-Build the strict production version:
+Build the production site:
 
 ```bash
 mkdocs build --strict

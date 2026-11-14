@@ -63,6 +63,8 @@ An Architecture Decision Record (ADR) should include:
 - [ ] Risky assumptions have a validation plan.
 - [ ] The decision and its consequences are recorded.
 
-## Further reading
+## Further Reading & References
 
-- [Martin Fowler: Architecture Decision Records](https://martinfowler.com/articles/architecture-decision-records.html)
+### Engineering Publications & Essays
+
+- [Architecture Decision Record - Martin Fowler](https://martinfowler.com/bliki/ArchitectureDecisionRecord.html) - Published: 2026-03-24

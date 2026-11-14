@@ -1,10 +1,16 @@
 # Clean Architecture
 
-Clean Architecture is a family of design approaches that place business policy toward the center of the system and keep it independent from external mechanisms such as databases, web frameworks, message brokers, and user interfaces.
+## At a Glance
 
-Its defining concern is dependency direction: source-code dependencies should point inward toward policy that is less likely to change for technical reasons.
+Clean Architecture is a family of design approaches that keep business policy independent from external details such as databases, web frameworks, message brokers and user interfaces.
 
-## Conceptual structure
+Its central idea is dependency direction: source-code dependencies should point toward the business rules that are less likely to change for technical reasons.
+
+## The Engineering Challenge
+
+When business rules depend directly on frameworks or databases, changes to those tools can spread through the application. Clear boundaries help keep business logic testable and less dependent on infrastructure.
+
+## Architecture Blueprint
 
 ```mermaid
 flowchart TB
@@ -17,63 +23,45 @@ flowchart TB
     USE --> DOMAIN
 ```
 
-The arrows represent a simplified dependency direction, not necessarily runtime call flow. At runtime, an inner use case may invoke an interface implemented by an outer infrastructure component. Dependency inversion allows the source dependency to remain inward-facing.
+The arrows show a simplified source-dependency direction, not necessarily runtime call flow. An inner use case may call an interface implemented by an outer infrastructure component.
 
-## Common elements
+## Where It Fits
 
-| Element | Responsibility |
-|---|---|
-| Entities or domain model | Core business rules and invariants |
-| Use cases or application services | Application-specific workflows |
-| Interface adapters | Translate between external formats and application models |
-| Frameworks and infrastructure | Database, web, messaging, UI, and other external mechanisms |
+Consider this approach when business rules are substantial, long-lived or important to test independently of infrastructure. It can also help when several delivery mechanisms or external systems use the same application policy.
 
-Names and layer counts vary between implementations. The dependency rule matters more than a prescribed folder structure.
+For a small application with little domain behavior, a lighter structure may be easier to maintain.
 
-## Dependency rule
-
-An inner policy layer should not import concrete details from an outer framework or database layer. Instead, define an interface or port at the inner boundary and implement it in an outer adapter.
-
-This can make business logic easier to test without starting the real database, web server, or message broker. It also creates explicit seams for replacing infrastructure.
-
-## Benefits
-
-- Business rules can remain independent of delivery and persistence technology.
-- Use cases can be tested with controlled dependencies.
-- External integrations have explicit boundaries.
-- Framework and database changes may be localized when abstractions are stable.
-
-## Costs and failure modes
+## Trade-offs & Pitfalls
 
 - Interfaces and mapping code can add ceremony.
 - Excessive abstraction can make simple flows harder to follow.
-- Poorly designed boundaries can leak persistence or transport models inward.
+- Persistence or transport models can leak into inner layers.
 - A folder structure named after Clean Architecture does not prove that dependencies point inward.
-- The approach does not automatically produce a good domain model.
 
-## When it fits
+The dependency rule matters more than a prescribed folder structure.
 
-Consider the approach when business rules are substantial, long-lived, or important to test independently of infrastructure. It can be especially useful when multiple delivery mechanisms or external systems interact with the same application policy.
+## Building It in Practice
 
-For a small CRUD application with little domain behavior, a lighter structure may be more economical.
+A common arrangement separates:
 
-## How to assess an implementation
+- **Domain rules:** core business concepts and invariants.
+- **Use cases:** application-specific workflows.
+- **Adapters:** translation between external formats and application models.
+- **Infrastructure:** databases, frameworks, messaging and other external mechanisms.
 
-- Can domain and use-case code compile without importing web or database frameworks?
-- Are external systems accessed through explicit interfaces?
-- Do adapters translate external models at the boundary?
-- Are use cases testable without infrastructure?
-- Are abstractions protecting meaningful policy, or merely adding indirection?
+Define interfaces at the boundary where they protect meaningful policy. Avoid adding abstractions that only create indirection.
 
-## Relationship to other styles
+## How It Connects
 
-Clean Architecture is compatible with layered architecture and modular monoliths. It is not itself a deployment topology and does not require microservices.
+Clean Architecture can be used inside a layered application, a modular monolith or an individual microservice. It is not a deployment topology and does not require microservices.
 
-## Evidence status
+## Scope Note
 
 This page describes dependency and maintainability principles. It does not claim a measured performance advantage.
 
-## References
+## Further Reading & References
 
-- [Robert C. Martin: The Clean Architecture](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html)
-- [Martin Fowler: Inversion of Control](https://martinfowler.com/articles/injection.html)
+### Engineering Publications & Essays
+
+- [The Clean Architecture - Robert C. Martin](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html) - Published: 2012-08-13
+- [Inversion of Control Containers and the Dependency Injection pattern - Martin Fowler](https://martinfowler.com/articles/injection.html) - Published: 2004-01-23

@@ -1,5 +1,5 @@
-site_name: Open Architecture Intelligence
-site_description: A practical, evidence-aware guide to software architecture.
+site_name: Open Architecture Knowledge
+site_description: Clear, practical and source-backed software architecture guidance.
 site_url: https://sandhiya0305.github.io/open-architecture-knowledge/
 repo_url: https://github.com/Sandhiya0305/open-architecture-knowledge
 repo_name: Sandhiya0305/open-architecture-knowledge
@@ -39,23 +39,18 @@ theme:
 
 nav:
   - Home: index.md
-  - Fundamentals:
-      - Architecture, Framework, Library: fundamentals/architecture-vs-framework.md
-      - Quality Attributes: fundamentals/quality-attributes.md
-      - Architecture Decision Process: fundamentals/decision-process.md
-  - Architectures:
+  - Architecture patterns:
       - Overview: architectures/index.md
-      - Layered Architecture: architectures/layered.md
-      - Modular Monolith: architectures/modular-monolith.md
+      - Layered architecture: architectures/layered.md
+      - Modular monolith: architectures/modular-monolith.md
       - Microservices: architectures/microservices.md
       - Clean Architecture: architectures/clean-architecture.md
-      - Event-Driven Architecture: architectures/event-driven.md
-  - Comparisons:
-      - Choosing an Architecture: comparisons/choosing-an-architecture.md
-  - Technologies:
-      - Ecosystem Guide: technologies/index.md
-  - Evidence:
-      - Evidence and Research Policy: evidence/index.md
+      - Event-driven architecture: architectures/event-driven.md
+  - Engineering decisions:
+      - Choosing an architecture: comparisons/choosing-an-architecture.md
+      - Quality attributes: fundamentals/quality-attributes.md
+      - Architecture vs frameworks: fundamentals/architecture-vs-framework.md
+      - Decision process: fundamentals/decision-process.md
   - About:
       - About OAI: about/index.md
       - Contributing: about/contributing.md

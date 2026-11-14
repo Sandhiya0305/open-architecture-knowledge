@@ -1,64 +1,48 @@
-# Software architecture, explained with evidence.
+# Understand architecture. Build better systems.
 
-Open Architecture Intelligence (OAI) is a practical reference for understanding software architecture, evaluating trade-offs, and making better engineering decisions.
+A practical knowledge hub for software architecture, full-stack design and engineering decisions.
 
-Architecture is not a contest to find one universally best pattern. It is the set of structural decisions that shape a system: its boundaries, dependencies, data ownership, communication, deployment model, and quality goals. The right design depends on the problem, constraints, team, and operating environment.
+Explore how systems are structured, how their parts work together, and what you gain or give up when choosing an approach. Explanations stay focused; diagrams and practical examples appear when they make a concept easier to understand.
 
 <div class="grid cards" markdown>
 
--   :material-layers-triple:{ .lg .middle } **Architecture styles**
+-   :material-layers-triple:{ .lg .middle } **Architecture patterns**
 
     ---
 
-    Understand the structure, strengths, limitations, and appropriate use cases of common architecture styles.
+    Understand common ways to structure applications and define boundaries.
 
-    [:octicons-arrow-right-24: Explore architectures](architectures/index.md)
+    [:octicons-arrow-right-24: Explore patterns](architectures/index.md)
 
--   :material-scale-balance:{ .lg .middle } **Compare approaches**
-
-    ---
-
-    Evaluate choices using delivery needs, domain complexity, consistency, operations, and team constraints.
-
-    [:octicons-arrow-right-24: Compare architectures](comparisons/choosing-an-architecture.md)
-
--   :material-code-braces:{ .lg .middle } **Technology ecosystems**
+-   :material-scale-balance:{ .lg .middle } **Engineering decisions**
 
     ---
 
-    Learn how languages and frameworks can support an architecture without defining it.
+    Compare approaches and evaluate the constraints that should shape a design.
 
-    [:octicons-arrow-right-24: Explore ecosystems](technologies/index.md)
+    [:octicons-arrow-right-24: Explore decisions](comparisons/choosing-an-architecture.md)
 
--   :material-flask-outline:{ .lg .middle } **Evidence and research**
+-   :material-compass-outline:{ .lg .middle } **Foundations**
 
     ---
 
-    See how OAI separates architectural guidance, adoption signals, and measured performance.
+    Get clear on architecture terminology, quality attributes and decision-making.
 
-    [:octicons-arrow-right-24: Read the evidence policy](evidence/index.md)
+    [:octicons-arrow-right-24: Learn the foundations](fundamentals/architecture-vs-framework.md)
 
 </div>
 
-## Start here
+## How to use this site
 
-1. Learn the distinction between [architecture, frameworks, and libraries](fundamentals/architecture-vs-framework.md).
-2. Review the [quality attributes](fundamentals/quality-attributes.md) that architecture decisions influence.
-3. Explore the [five architecture references](architectures/index.md).
-4. Use the [decision process](fundamentals/decision-process.md) to evaluate a real system.
+Start with the pattern or engineering problem closest to your work. Each article aims to explain the core idea, show how the design fits together, describe meaningful trade-offs and point to the sources used.
 
-## Our editorial standard
+## Our standard
 
-- Explain the problem a design addresses before recommending it.
-- Describe both benefits and costs; avoid universal claims.
-- Link factual and time-sensitive statements to credible sources.
-- Keep popularity signals separate from performance evidence.
-- Label uncertainty. An unverified claim is not a fact.
-- Prefer decision guidance over technology promotion.
+- Clear explanations without unnecessary theory.
+- Practical examples only when they improve understanding.
+- No invented facts, benchmarks, citations or adoption claims.
+- Trade-offs and limitations alongside potential benefits.
+- References grouped by source type, with direct links.
+- No forced sections: content appears only when it adds value.
 
-!!! note "Research status"
-    These pages are curated architectural guidance, not benchmark rankings. Where empirical evidence is not available, OAI says so explicitly. The discovery engine's observations and candidate claims are not automatically treated as verified knowledge.
-
-## Project
-
-OAI has two complementary parts: the [research engine](https://github.com/Sandhiya0305/open-architecture-intelligence), which collects and assesses candidate information, and this knowledge repository, which publishes reviewed reference material.
+OAI is a curated knowledge resource, not a ranking of architectures or frameworks. A pattern is never presented as universally best.

@@ -1,22 +1,19 @@
-# Architecture styles
+# Architecture patterns
 
-An architecture style describes a family of systems that share structural characteristics and constraints. Styles are useful design tools, not mutually exclusive product categories. A real application may use layered organization inside a modular monolith, apply Clean Architecture dependency rules to selected modules, and use events for integration.
+Architecture patterns describe recurring ways to organize software, define boundaries and manage dependencies. They are design tools, not ready-made solutions. Real systems often combine more than one.
 
-## The five reference styles
+## Explore the patterns
 
-| Style | Main organizing idea | A useful starting question |
-|---|---|---|
-| [Layered](layered.md) | Separate responsibilities into horizontal layers | Are responsibilities and dependencies clear? |
-| [Modular monolith](modular-monolith.md) | One deployment unit with explicit internal modules | Do we need strong boundaries without distributed deployment? |
-| [Microservices](microservices.md) | Independently deployable services around business capabilities | Do independent ownership and deployment justify distributed-systems costs? |
-| [Clean Architecture](clean-architecture.md) | Direct source dependencies toward business policy | Can business rules remain independent of external details? |
-| [Event-driven](event-driven.md) | Components react to published events | Do workflows benefit from asynchronous, decoupled reactions? |
+| Pattern | Core idea |
+|---|---|
+| [Layered architecture](layered.md) | Separate an application into responsibility-focused layers. |
+| [Modular monolith](modular-monolith.md) | Keep one deployment unit while enforcing clear internal module boundaries. |
+| [Microservices](microservices.md) | Organize a system into independently deployable services. |
+| [Clean Architecture](clean-architecture.md) | Keep business policy independent from external details. |
+| [Event-driven architecture](event-driven.md) | Coordinate components through events and asynchronous reactions. |
 
-## How to use these references
+## A useful starting point
 
-Each page explains the structure, dependency model, benefits, costs, failure modes, and conditions that make the style a reasonable choice. Use the pages as decision support, not as a ranking.
+If you are choosing a structure for a new or existing application, begin with the [architecture comparison guide](../comparisons/choosing-an-architecture.md).
 
-!!! warning "No universal winner"
-    A style does not guarantee performance, security, scalability, or maintainability. Those outcomes depend on the concrete design, implementation, workload, team, and operating environment.
-
-Start with the [architecture decision process](../fundamentals/decision-process.md), then use the [comparison guide](../comparisons/choosing-an-architecture.md) to evaluate alternatives.
+There is no universal winner. Choose the simplest design that meets the system's actual requirements and that the team can operate effectively.

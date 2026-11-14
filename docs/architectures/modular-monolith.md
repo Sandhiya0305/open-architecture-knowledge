@@ -1,99 +1,75 @@
-# Modular monolith
+# Modular Monolith
 
-A modular monolith is one application deployment unit organized into cohesive modules with explicit boundaries and controlled dependencies. It combines a relatively simple deployment model with deliberate internal structure.
+## At a Glance
 
-The term is not a guarantee of quality. A monolith is modular only when its boundaries are meaningful and reasonably enforced.
+A modular monolith is one application deployment unit divided into cohesive modules with explicit boundaries. Modules may represent business capabilities such as orders, catalog or identity.
 
-## Conceptual structure
+The goal is to keep deployment relatively simple without allowing the codebase to become one tightly coupled block.
+
+## The Engineering Challenge
+
+A single application can be straightforward to build and operate, but its internal parts may become difficult to change independently. A modular monolith addresses this by making module ownership and dependencies explicit.
+
+## Architecture Blueprint
 
 ```mermaid
 flowchart TB
     subgraph APP[One application deployment]
-      subgraph ORDERS[Orders module]
-        OAPI[Public interface]
-        ODOM[Order rules and data]
-      end
-      subgraph CATALOG[Catalog module]
-        CAPI[Public interface]
-        CDOM[Catalog rules and data]
-      end
-      subgraph USERS[Identity module]
-        UAPI[Public interface]
-        UDOM[Identity rules and data]
-      end
-      OAPI --> CAPI
-      OAPI --> UAPI
+        O[Orders module]
+        C[Catalog module]
+        I[Identity module]
+        O --> C
+        O --> I
     end
-    DB[(Database or managed persistence)]
-    ODOM --> DB
-    CDOM --> DB
-    UDOM --> DB
+    DB[(Persistence)]
+    O --> DB
+    C --> DB
+    I --> DB
 ```
 
-The diagram is illustrative. A modular monolith may use one database with module-owned tables, separate schemas, or other persistence arrangements. The critical property is that modules do not casually reach into one another's internals.
+The diagram is illustrative. Modules may share a database while owning separate tables or schemas. The important rule is that a module should not casually access another module's internal data or code.
 
-## Core characteristics
+## Where It Fits
 
-- One primary application deployment unit.
-- Modules aligned to business capabilities or cohesive areas of the domain.
-- Explicit public interfaces between modules.
-- Clear ownership of module data and business rules.
-- Dependency rules that prevent arbitrary cross-module access.
-- Tests that verify important module boundaries.
+Consider this approach when:
 
-## Benefits
+- The domain needs clear business boundaries.
+- Independent service deployment is not yet necessary.
+- The team wants simpler local development and operations than a distributed system.
+- The domain is still evolving and service boundaries are not yet clear.
 
-- Avoids network calls between modules that run in the same process.
-- Keeps deployment and local development simpler than a distributed fleet of services.
-- Allows teams to establish domain boundaries before deciding whether independent deployment is necessary.
-- Can support later extraction of a module when a real operational or organizational need appears.
+## Trade-offs & Pitfalls
 
-## Costs and failure modes
+- Boundaries erode when developers bypass module interfaces.
+- Shared tables can create hidden coupling.
+- All modules usually share one application release and scaling unit.
+- Poorly separated modules can become a tightly coupled monolith with extra ceremony.
 
-- Boundaries erode if developers bypass module interfaces.
-- A shared database can become a source of hidden coupling.
-- Independent scaling and deployment are limited by the application unit.
-- A single release may require coordination across modules.
-- Poorly separated modules can become a tightly coupled monolith with more ceremony.
+A modular monolith requires deliberate boundaries and tests that help protect them. The name alone does not make an application modular.
 
-## Boundary design
+## Building It in Practice
 
-For each module, define:
+For each module, define its business responsibility, public interface, data ownership and permitted dependencies. Prefer cohesive modules that change together; do not create a separate module for every class or database table.
 
-1. The business capability it owns.
-2. Its public commands, queries, or interfaces.
-3. The data it owns and the data it may read from elsewhere.
-4. The dependencies it is allowed to have.
-5. The events or contracts it exposes to other modules.
-6. How boundary violations are detected.
+## When to Extract a Service
 
-Prefer cohesive modules that change together. Avoid splitting every entity or database table into its own module.
+Extract a module only when there is a concrete reason for independent deployment, scaling, security isolation, reliability or team ownership. Extraction also introduces network failures, data consistency and operational responsibilities.
 
-## When it fits
+## How It Connects
 
-Consider a modular monolith when:
+A modular monolith can use layered organization or Clean Architecture inside its modules. It can also use events for communication without becoming a microservices system.
 
-- The product needs clear business boundaries.
-- The team is small or medium-sized, or operational capacity is limited.
-- Independent deployment is not yet a real requirement.
-- Strong consistency across workflows is important.
-- The domain is evolving and service boundaries are not yet well understood.
+## Scope Note
 
-## When to extract a service
+Research on modular monoliths is still developing, and terminology is not fully consistent across the literature. This page focuses on practical structural characteristics rather than claiming measured performance advantages.
 
-Consider extraction only when a module has a concrete reason to own a separate deployment lifecycle—for example, distinct scaling needs, security isolation, team ownership, reliability requirements, or technology constraints.
+## Further Reading & References
 
-Before extraction, assess network failure, data ownership, consistency, observability, deployment automation, and operational support. Extraction is a distributed-systems change, not merely moving code to another repository.
+### Official Documentation & Architecture Guides
 
-## Relationship to other styles
+- [Choose how to segment your workload - AWS Well-Architected](https://docs.aws.amazon.com/wellarchitected/2024-06-27/framework/rel_service_architecture_monolith_soa_microservice.html)
 
-A modular monolith can use layered organization inside each module and Clean Architecture dependency rules within selected modules. It can also publish domain events while remaining a single deployment unit.
+### Research & Technical Reports
 
-## Evidence status
-
-This page describes design trade-offs. It does not claim that modular monoliths universally outperform microservices.
-
-## References
-
-- [AWS Prescriptive Guidance: Decomposing monoliths into microservices](https://docs.aws.amazon.com/prescriptive-guidance/latest/modernization-decomposing-monoliths/)
-- [AWS Well-Architected: Choose how to segment your workload](https://docs.aws.amazon.com/wellarchitected/2024-06-27/framework/rel_service_architecture_monolith_soa_microservice.html)
+- [Modular Monolith Architecture in Cloud Environments: A Systematic Literature Review - Future Internet](https://www.mdpi.com/1999-5903/17/11/496) - Published: 2025-10-29
+- [Modular Monolith: Is This the Trend in Software Architecture? - Ruoyu Su and Xiaozhou Li](https://doi.org/10.1145/3643657.3643911) - Published: 2024-08-23
