@@ -3,10 +3,10 @@ site_description: Clear, practical and source-backed software architecture guida
 site_url: https://sandhiya0305.github.io/open-architecture-knowledge/
 repo_url: https://github.com/Sandhiya0305/open-architecture-knowledge
 repo_name: Sandhiya0305/open-architecture-knowledge
-edit_uri: edit/main/docs/
 
 theme:
   name: material
+  variant: classic
   language: en
   features:
     - navigation.instant
@@ -16,8 +16,7 @@ theme:
     - search.suggest
     - search.highlight
     - content.code.copy
-    - content.action.edit
-    - toc.follow
+    - toc.integrate
   palette:
     - scheme: default
       primary: indigo
@@ -39,6 +38,10 @@ theme:
 
 nav:
   - Home: index.md
+  - Start here:
+      - Learning path: learning-path/index.md
+      - Foundations: fundamentals/index.md
+      - Glossary: glossary.md
   - Architecture patterns:
       - Overview: architectures/index.md
       - Layered architecture: architectures/layered.md
@@ -53,6 +56,7 @@ nav:
       - Node.js and TypeScript: technologies/nodejs.md
       - PHP: technologies/php.md
       - Cross-stack tools: technologies/cross-stack.md
+      - Catalogue review log: technologies/review-log.md
   - Engineering decisions:
       - Choosing an architecture: comparisons/choosing-an-architecture.md
       - Quality attributes: fundamentals/quality-attributes.md
@@ -61,6 +65,7 @@ nav:
   - Reviewed research candidates: research-candidates/index.md
   - About:
       - About OAI: about/index.md
+      - Documentation license: licensing.md
       - Contributing: about/contributing.md
 
 markdown_extensions:
@@ -82,7 +87,6 @@ plugins:
   - search
 
 extra_javascript:
-  - https://unpkg.com/mermaid@11.4.1/dist/mermaid.min.js
   - javascripts/mermaid-init.js
 
 strict: true

@@ -65,6 +65,10 @@ A modular monolith can use layered organization or Clean Architecture inside its
 
 - [Choose how to segment your workload - AWS Well-Architected](https://docs.aws.amazon.com/wellarchitected/2024-06-27/framework/rel_service_architecture_monolith_soa_microservice.html)
 
+### Engineering Publications & Essays
+
+- [Modular Monolith and Package by Component - Simon Brown](https://simonbrown.je/modular-monolith/) - Practitioner material on modular boundaries and package-by-component organization.
+
 ### Research & Technical Reports
 
 - [Modular Monolith Architecture in Cloud Environments: A Systematic Literature Review - Future Internet](https://www.mdpi.com/1999-5903/17/11/496) - Published: 2025-10-29

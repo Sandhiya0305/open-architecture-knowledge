@@ -59,6 +59,10 @@ Layered architecture can be combined with a modular monolith. Clean Architecture
 
 - [Architecture styles - Microsoft](https://learn.microsoft.com/en-us/azure/architecture/guide/architecture-styles/) - Updated: 2025-10-14
 
+### Books & Practitioner References
+
+- [Software Architecture Patterns - Mark Richards](https://www.oreilly.com/library/view/software-architecture-patterns/9781491971437/ch01.html) - Chapter 1 describes layered architecture, its responsibilities and trade-offs.
+
 ### Engineering Publications & Essays
 
 - [Presentation Domain Data Layering - Martin Fowler](https://martinfowler.com/bliki/PresentationDomainDataLayering.html) - Published: 2015-08-26

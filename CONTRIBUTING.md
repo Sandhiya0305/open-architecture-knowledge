@@ -13,6 +13,7 @@ This repository is a curated reference, not an unreviewed feed of generated summ
 ## Evidence requirements
 
 For a performance or benchmark claim, include:
+
 - Workload and tested operations.
 - Hardware and execution environment.
 - Language, runtime, framework, and relevant dependency versions.
@@ -38,3 +39,7 @@ If essential methodology is missing, label the claim **unverified** and do not u
 - Generated content must be reviewed by a human.
 - Use pull requests. Do not automatically merge generated changes.
 - Avoid copying substantial third-party text; summarize in original language and link to the source.
+
+## Contribution licensing
+
+By submitting original documentation content, you agree that the contribution may be distributed under CC BY 4.0, consistent with [`docs/licensing.md`](docs/licensing.md). Code, scripts and configuration contributions are distributed under the repository's MIT License. Do not submit material you do not have permission to license; identify third-party material and its terms clearly.

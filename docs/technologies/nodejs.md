@@ -2,7 +2,7 @@
 
 Node.js and TypeScript are used for backend services, browser applications and full-stack web products. The ecosystem includes tools for both sides of a web application.
 
-<small>Last reviewed: 14 November 2026</small>
+<small>Catalogue review: [November 2026](review-log.md)</small>
 
 ## Backend frameworks
 
@@ -20,8 +20,6 @@ Node.js and TypeScript are used for backend services, browser applications and f
 | Vue | Build user interfaces with a progressive framework. | [Vue](https://vuejs.org/guide/) |
 | Angular | Build web applications with an integrated framework and tooling. | [Angular](https://angular.dev/) |
 | Next.js | Build full-stack web applications with React. | [Next.js](https://nextjs.org/docs) |
-| Nuxt | Build full-stack web applications with Vue. | [Nuxt](https://nuxt.com/docs) |
-| SvelteKit | Build web applications using Svelte. | [SvelteKit](https://svelte.dev/docs/kit) |
 
 ## Data access and validation
 
@@ -29,7 +27,6 @@ Node.js and TypeScript are used for backend services, browser applications and f
 |---|---|---|
 | Prisma | Type-safe database access and schema management. | [Prisma](https://www.prisma.io/docs) |
 | Drizzle ORM | TypeScript ORM and SQL query builder. | [Drizzle](https://orm.drizzle.team/docs/overview) |
-| TypeORM | Object-relational mapping for TypeScript and JavaScript. | [TypeORM](https://typeorm.io/) |
 | Zod | Validate data with TypeScript-first schemas. | [Zod](https://zod.dev/) |
 
 ## Build, testing and real-time features
@@ -37,10 +34,8 @@ Node.js and TypeScript are used for backend services, browser applications and f
 | Tool | Typical use | Documentation |
 |---|---|---|
 | Vite | Frontend development server and build tool. | [Vite](https://vite.dev/guide/) |
-| npm | Default package manager distributed with Node.js. | [npm](https://docs.npmjs.com/) |
 | pnpm | Package manager with efficient dependency storage. | [pnpm](https://pnpm.io/) |
 | Vitest | Unit testing for JavaScript and TypeScript projects. | [Vitest](https://vitest.dev/guide/) |
-| Jest | JavaScript testing framework. | [Jest](https://jestjs.io/docs/getting-started) |
 | Playwright | Browser automation and end-to-end testing. | [Playwright](https://playwright.dev/docs/intro) |
 | Socket.IO | Bidirectional event-based communication between clients and servers. | [Socket.IO](https://socket.io/docs/v4/) |
 

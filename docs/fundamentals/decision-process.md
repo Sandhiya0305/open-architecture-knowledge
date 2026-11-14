@@ -1,6 +1,6 @@
 # A practical architecture decision process
 
-Architecture decisions should begin with the problem and constraints—not with a fashionable pattern or a preferred framework.
+Architecture decisions should begin with the problem and constraints, not with a fashionable pattern or a preferred framework.
 
 ## 1. Understand the system
 
@@ -31,16 +31,16 @@ Consider the simplest structures that could meet the requirements. Candidates ma
 
 For each candidate, record:
 
-- What becomes easier?
-- What becomes harder?
-- Which new failure modes appear?
-- What operational capabilities are required?
-- How reversible is the decision?
-- What evidence supports the assumptions?
+- What becomes easier-
+- What becomes harder-
+- Which new failure modes appear-
+- What operational capabilities are required-
+- How reversible is the decision-
+- What evidence supports the assumptions-
 
 ## 6. Validate risky assumptions
 
-Use a prototype, load test, dependency test, threat model, or operational exercise where appropriate. Record the workload, environment, versions, method, and results. A prototype is evidence about its tested scope—not proof that every production system will behave the same way.
+Use a prototype, load test, dependency test, threat model, or operational exercise where appropriate. Record the workload, environment, versions, method, and results. A prototype is evidence about its tested scope, not proof that every production system will behave the same way.
 
 ## 7. Record the decision
 
@@ -68,3 +68,9 @@ An Architecture Decision Record (ADR) should include:
 ### Engineering Publications & Essays
 
 - [Architecture Decision Record - Martin Fowler](https://martinfowler.com/bliki/ArchitectureDecisionRecord.html) - Published: 2026-03-24
+- [Documenting Architecture Decisions - Michael Nygard](https://cognitect.com/blog/2011/11/15/documenting-architecture-decisions) - The original short-form ADR proposal, with context, decision, status and consequences.
+
+### Research & Technical Reports
+
+- [The Architecture Tradeoff Analysis Method (ATAM) - Software Engineering Institute](https://www.sei.cmu.edu/library/the-architecture-tradeoff-analysis-method/) - A method for evaluating architectural decisions against competing quality attributes.
+- [ISO/IEC/IEEE 42010:2022 - Architecture description](https://www.iso.org/standard/74393.html) - Requirements for structuring and expressing architecture descriptions.

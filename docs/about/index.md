@@ -17,3 +17,7 @@ The goal is simple: explain concepts clearly, show useful design trade-offs, and
 Corrections, clearer explanations and useful new topics are welcome. See the [contribution guide](contributing.md).
 
 The companion [OAI research project](https://github.com/Sandhiya0305/open-architecture-intelligence) supports discovery and review. This site contains the curated knowledge intended for developers.
+
+## Content license
+
+Original written material in `docs/` is available under [CC BY 4.0](../licensing.md). Site configuration and software files remain under the repository MIT License.

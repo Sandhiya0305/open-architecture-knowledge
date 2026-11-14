@@ -56,6 +56,7 @@ Event-driven communication can be used inside a modular monolith, between micros
 ### Official Documentation & Architecture Guides
 
 - [Event-driven architecture style - Microsoft](https://learn.microsoft.com/en-us/azure/architecture/guide/architecture-styles/event-driven) - Updated: 2026-03-07
+- [Event-driven architecture - AWS Prescriptive Guidance](https://docs.aws.amazon.com/prescriptive-guidance/latest/modernization-integrating-microservices/asynchronous.html) - Describes event-driven integration in distributed applications.
 
 ### Engineering Publications & Essays
 

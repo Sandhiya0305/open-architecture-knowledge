@@ -64,3 +64,8 @@ There is no universally optimal point. The correct balance depends on business p
 ### Official Documentation & Architecture Guides
 
 - [Azure Architecture Center - Microsoft](https://learn.microsoft.com/en-us/azure/architecture/)
+
+### Research & Technical Reports
+
+- [Reasoning About Software Quality Attributes - Software Engineering Institute](https://www.sei.cmu.edu/library/reasoning-about-software-quality-attributes/) - Explains quality-attribute scenarios and their influence on architectural choices.
+- [The Architecture Tradeoff Analysis Method - Software Engineering Institute](https://www.sei.cmu.edu/library/the-architecture-tradeoff-analysis-method/) - Describes how quality attributes interact and create architectural trade-offs.

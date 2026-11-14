@@ -1,4 +1,4 @@
-# Understand architecture. Build better systems.
+# Understand architecture. Build better systems
 
 A practical knowledge hub for software architecture, full-stack design and engineering decisions.
 
@@ -26,7 +26,7 @@ Browse frameworks, libraries and tools across Java, Python, Node.js/TypeScript a
 
 Get clear on architecture terminology, quality attributes and decision-making.
 
-[Learn the foundations](fundamentals/architecture-vs-framework.md)
+[Learn the foundations](fundamentals/index.md)
 
 ## How to use this site
 
@@ -40,3 +40,7 @@ Start with the pattern, engineering problem or technology closest to your work. 
 - Trade-offs and limitations alongside potential benefits.
 - References grouped by source type, with direct links.
 - No forced sections: content appears only when it adds value.
+
+## Start here
+
+New to the topic? Follow the [learning path](learning-path/index.md) or look up a term in the [glossary](glossary.md).

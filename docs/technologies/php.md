@@ -2,7 +2,7 @@
 
 PHP is used for server-rendered websites, content platforms, APIs and business applications. These tools cover application frameworks and the development workflow around them.
 
-<small>Last reviewed: 14 November 2026</small>
+<small>Catalogue review: [November 2026](review-log.md)</small>
 
 ## Application frameworks
 
@@ -10,7 +10,6 @@ PHP is used for server-rendered websites, content platforms, APIs and business a
 |---|---|---|
 | Laravel | Build web applications and APIs with an integrated application ecosystem. | [Laravel](https://laravel.com/docs) |
 | Symfony | Build web applications with reusable components and framework services. | [Symfony](https://symfony.com/doc/current/index.html) |
-| Slim | Build lightweight HTTP applications and APIs. | [Slim](https://www.slimframework.com/docs/) |
 
 ## APIs, security and persistence
 
@@ -28,15 +27,12 @@ PHP is used for server-rendered websites, content platforms, APIs and business a
 | PHPUnit | Unit and integration testing for PHP. | [PHPUnit](https://docs.phpunit.de/) |
 | Pest | Expressive testing framework built on PHPUnit. | [Pest](https://pestphp.com/docs) |
 | PHPStan | Static analysis to find errors in PHP code. | [PHPStan](https://phpstan.org/user-guide/getting-started) |
-| Psalm | Static analysis and type checking for PHP. | [Psalm](https://psalm.dev/docs/) |
 
 ## Package and development tools
 
 | Tool | Typical use | Documentation |
 |---|---|---|
 | Composer | Dependency management and autoloading for PHP projects. | [Composer](https://getcomposer.org/doc/) |
-| Laravel Pint | Code style fixer for Laravel projects. | [Laravel Pint](https://laravel.com/docs/pint) |
-| Symfony CLI | Local development and application management for Symfony projects. | [Symfony CLI](https://symfony.com/download) |
 
 Other useful companions include [Redis](https://redis.io/docs/), [Docker](https://docs.docker.com/) and [OpenTelemetry](https://opentelemetry.io/docs/).
 

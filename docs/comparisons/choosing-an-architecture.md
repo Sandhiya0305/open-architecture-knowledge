@@ -25,7 +25,7 @@ The domain is relatively straightforward, a single deployment unit is appropriat
 
 ### Prefer a modular monolith when
 
-The domain needs clear business boundaries, but independent deployment and scaling are not yet necessary. This is often a strong default for a new product with an evolving domain.
+A modular monolith can fit when the domain has meaningful internal boundaries but independent deployment is not a current requirement. It is one option, not a universal default; the decision depends on domain knowledge, team structure and operational constraints.
 
 ### Consider microservices when
 
@@ -66,3 +66,10 @@ Architecture labels do not determine performance. A meaningful comparison needs 
 
 - [Architecture styles - Microsoft](https://learn.microsoft.com/en-us/azure/architecture/guide/architecture-styles/) - Updated: 2025-10-14
 - [Choose how to segment your workload - AWS Well-Architected](https://docs.aws.amazon.com/wellarchitected/2024-06-27/framework/rel_service_architecture_monolith_soa_microservice.html)
+
+## Further reading
+
+- [The Architecture Tradeoff Analysis Method - Software Engineering Institute](https://www.sei.cmu.edu/library/the-architecture-tradeoff-analysis-method/) - A structured approach to analyzing architecture risks and quality-attribute trade-offs.
+- [Monolith First - Martin Fowler](https://martinfowler.com/bliki/MonolithFirst.html) - Explains why evolving boundaries can favor starting with a well-structured monolith.
+- [Don't start with a monolith - Stefan Tilkov](https://martinfowler.com/articles/dont-start-monolith.html) - Presents the counterargument for identifying service boundaries early when the goal is microservices.
+- [Microservices - Martin Fowler and James Lewis](https://martinfowler.com/articles/microservices.html) - Discusses the trade-offs involved in service-based decomposition.

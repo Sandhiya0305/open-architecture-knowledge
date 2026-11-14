@@ -61,3 +61,7 @@ Clean Architecture can be used inside a layered application, a modular monolith 
 
 - [The Clean Architecture - Robert C. Martin](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html) - Published: 2012-08-13
 - [Inversion of Control Containers and the Dependency Injection pattern - Martin Fowler](https://martinfowler.com/articles/injection.html) - Published: 2004-01-23
+
+### Original Pattern Papers
+
+- [Hexagonal Architecture (Ports and Adapters) - Alistair Cockburn](https://alistair.cockburn.us/hexagonal-architecture) - Original technical report describing ports, adapters and application isolation.

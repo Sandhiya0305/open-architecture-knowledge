@@ -1,6 +1,6 @@
 # Architecture vs framework vs library
 
-These terms are related, but they describe different levels of a software system. Confusing them leads to weak architecture discussions—for example, claiming that using Spring Boot automatically means an application follows Clean Architecture.
+These terms are related, but they describe different levels of a software system. Confusing them leads to weak architecture discussions. For example, using Spring Boot does not automatically mean an application follows Clean Architecture.
 
 ## Architecture
 
@@ -42,12 +42,12 @@ A library usually has a narrower responsibility than a framework and does not de
 
 | Question | Primarily concerns |
 |---|---|
-| What are the system boundaries and deployment units? | Architecture |
-| Which dependencies are allowed between business modules? | Architecture |
-| How is the HTTP request lifecycle organized? | Framework |
-| How do I parse a date or serialize JSON? | Library |
-| Which component owns customer data? | Architecture |
-| Which ORM maps objects to database records? | Framework or library |
+| What are the system boundaries and deployment units- | Architecture |
+| Which dependencies are allowed between business modules- | Architecture |
+| How is the HTTP request lifecycle organized- | Framework |
+| How do I parse a date or serialize JSON- | Library |
+| Which component owns customer data- | Architecture |
+| Which ORM maps objects to database records- | Framework or library |
 
 ## Why the distinction matters
 
@@ -57,11 +57,11 @@ Likewise, adopting an architecture label does not prove that the implementation 
 
 ## Review questions
 
-- What are the system's business capabilities?
-- Which components own those capabilities and their data?
-- What dependencies are allowed, and how are they enforced?
-- How do components communicate?
-- Which quality attributes matter most?
+- What are the system's business capabilities-
+- Which components own those capabilities and their data-
+- What dependencies are allowed, and how are they enforced-
+- How do components communicate-
+- Which quality attributes matter most-
 - Which constraints come from the team, budget, runtime, or operating environment?
 
 ## Further Reading & References
@@ -73,3 +73,8 @@ Likewise, adopting an architecture label does not prove that the implementation 
 ### Engineering Publications & Essays
 
 - [Inversion of Control Containers and the Dependency Injection pattern - Martin Fowler](https://martinfowler.com/articles/injection.html) - Published: 2004-01-23
+
+## Further reading
+
+- [Software Architecture Guide - Martin Fowler](https://martinfowler.com/architecture/) - Discusses competing definitions of architecture and the role of significant design decisions.
+- [ISO/IEC/IEEE 42010:2022 - Architecture description](https://www.iso.org/standard/74393.html) - Defines requirements for expressing architecture descriptions.

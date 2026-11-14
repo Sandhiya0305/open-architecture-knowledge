@@ -59,3 +59,7 @@ Microservices can use event-driven communication, and each service can apply lay
 
 - [Microservices architecture style - Microsoft](https://learn.microsoft.com/en-us/azure/architecture/guide/architecture-styles/microservices) - Updated: 2025-07-11
 - [Choose how to segment your workload - AWS Well-Architected](https://docs.aws.amazon.com/wellarchitected/2024-06-27/framework/rel_service_architecture_monolith_soa_microservice.html)
+
+### Engineering Publications & Essays
+
+- [Microservices - Martin Fowler and James Lewis](https://martinfowler.com/articles/microservices.html) - Discusses service boundaries, independent deployment and the organizational and operational trade-offs.
