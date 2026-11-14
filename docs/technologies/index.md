@@ -38,7 +38,7 @@ The catalogue does not infer quality or performance from stars, downloads or men
 
 ## Keeping the catalogue current
 
-The ecosystem pages are reviewed monthly. Check official documentation and release notes, update entries when tools or guidance change, and remove projects that are no longer maintained or relevant. The [catalogue review log](review-log.md) records the review date, scope and changes in one place.
+Run a short monthly scan for major releases, support changes and licensing notices. Complete a full review of the catalogue quarterly, checking official documentation and project maintenance information. Remove tools that are archived, unsupported or no longer relevant. The [catalogue review log](review-log.md) records the date, scope and changes in one place.
 
 ## Licensing and maintenance checks
 
