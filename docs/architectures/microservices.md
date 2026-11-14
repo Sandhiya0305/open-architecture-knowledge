@@ -53,10 +53,6 @@ A small team, an early product, a simple domain or limited operational capacity 
 
 Microservices can use event-driven communication, and each service can apply layered or Clean Architecture internally. These describe different aspects of a system and can be combined.
 
-## Scope Note
-
-Microservices do not inherently make a system faster, cheaper, more secure or more scalable. Such claims need workload, environment, versions, methodology, results, date and source.
-
 ## Further Reading & References
 
 ### Official Documentation & Architecture Guides

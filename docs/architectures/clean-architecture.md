@@ -55,10 +55,6 @@ Define interfaces at the boundary where they protect meaningful policy. Avoid ad
 
 Clean Architecture can be used inside a layered application, a modular monolith or an individual microservice. It is not a deployment topology and does not require microservices.
 
-## Scope Note
-
-This page describes dependency and maintainability principles. It does not claim a measured performance advantage.
-
 ## Further Reading & References
 
 ### Engineering Publications & Essays

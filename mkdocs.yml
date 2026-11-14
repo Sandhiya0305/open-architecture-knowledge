@@ -46,6 +46,13 @@ nav:
       - Microservices: architectures/microservices.md
       - Clean Architecture: architectures/clean-architecture.md
       - Event-driven architecture: architectures/event-driven.md
+  - Frameworks and libraries:
+      - Overview: technologies/index.md
+      - Java: technologies/java.md
+      - Python: technologies/python.md
+      - Node.js and TypeScript: technologies/nodejs.md
+      - PHP: technologies/php.md
+      - Cross-stack tools: technologies/cross-stack.md
   - Engineering decisions:
       - Choosing an architecture: comparisons/choosing-an-architecture.md
       - Quality attributes: fundamentals/quality-attributes.md

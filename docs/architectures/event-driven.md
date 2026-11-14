@@ -51,10 +51,6 @@ For a simple request-response flow that needs immediate consistency, event infra
 
 Event-driven communication can be used inside a modular monolith, between microservices or alongside a layered application. It is a communication approach, not necessarily a deployment style.
 
-## Scope Note
-
-EDA does not universally improve latency, throughput or availability. Outcomes depend on the workload, transport, implementation and operating environment.
-
 ## Further Reading & References
 
 ### Official Documentation & Architecture Guides

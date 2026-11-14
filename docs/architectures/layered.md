@@ -53,10 +53,6 @@ The same responsibility boundaries can be represented with Java packages, Python
 
 Layered architecture can be combined with a modular monolith. Clean Architecture adds a stronger focus on keeping source dependencies pointed toward business policy.
 
-## Scope Note
-
-This is design guidance, not evidence that layered applications are inherently faster or slower than other styles.
-
 ## Further Reading & References
 
 ### Official Documentation & Architecture Guides

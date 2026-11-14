@@ -7,65 +7,40 @@ Help make architecture knowledge clearer, more useful and easier to verify. Cont
 - Keep explanations concise and use plain, precise language.
 - Explain technical terms when readers may not know them.
 - Focus on the concept and the engineering problem it addresses.
-- Use a diagram, analogy, code sample or practical example only when it genuinely clarifies the subject.
-- Do not add sections merely to fill a template. Remove sections that do not add value.
-- Explain meaningful trade-offs. Avoid presenting any pattern as a universal solution.
+- Use diagrams, examples or code only when they clarify the subject.
+- Explain meaningful trade-offs without presenting a pattern as a universal solution.
 - Avoid promotional language and unsupported claims.
 
-## Suggested article flow
+## Sources and accuracy
 
-Use the [reusable article template](https://github.com/Sandhiya0305/open-architecture-knowledge/blob/main/templates/architecture-article-template.md) as a starting point. These sections are guidance, not a mandatory checklist.
+- Link sources that were actually consulted and support the content.
+- Prefer official documentation, specifications, original research and first-hand engineering case studies.
+- Do not invent references, statistics, quotations or adoption claims.
+- If sources disagree or evidence is incomplete, state the uncertainty.
+- Use original wording and avoid reproducing substantial third-party text.
 
-1. **At a Glance** — a short explanation of the concept.
-2. **The Engineering Challenge** — the problem or constraint behind it.
-3. **Architecture Blueprint** — the main components and how they interact.
-4. **Where It Fits** — suitable scenarios and important constraints.
-5. **Trade-offs & Pitfalls** — costs, limitations and common failure modes.
-6. **Building It in Practice** — implementation guidance or an example when useful.
-7. **Making the Choice** — relevant alternatives and decision criteria.
-8. **Further Reading & References** — the sources used to prepare the article.
+## Technology catalogue updates
 
-Not every article needs all eight sections. A short, accurate explanation is better than a long article padded with generic content.
+Review the framework, library and tool pages once a month.
 
-## Source and accuracy requirements
+1. Check each project's official documentation and release notes.
+2. Update descriptions or links when the project changes in a meaningful way.
+3. Remove projects that are archived, unsupported or no longer relevant.
+4. Update the page's **Last reviewed** date.
 
-- Cite sources that were actually consulted and that support the statements being made.
-- Prefer original research, specifications, official documentation and first-hand engineering case studies.
-- Link important factual or time-sensitive claims to the relevant source where practical.
-- Group references by type, such as Official Documentation, Engineering Publications, Research, Case Studies, or Benchmarks.
-- Include the title, author or organization, direct URL and publication/update date when available.
-- Do not invent references, statistics, quotations, implementations or real-world adoption claims.
-- If sources disagree or evidence is incomplete, state the uncertainty rather than guessing.
-- Use original wording. Do not reproduce substantial third-party text.
+Keep this manual and lightweight. Do not add version numbers unless a page specifically needs a version comparison.
 
-## Performance and benchmark claims
+## Performance claims
 
-Popularity, stars, downloads, mentions and adoption signals are not performance measurements.
+Popularity, stars, downloads and mentions are not performance measurements. A performance claim needs workload, hardware and environment, software versions, methodology, results, measurement date, source and limitations. Leave unsupported comparisons out.
 
-A performance claim needs enough context to be interpreted: workload, hardware and environment, software versions, methodology, results and units, measurement date, source and limitations. If essential details are missing, label the claim unverified or leave it out. Do not rank architectures using unsupported performance claims.
+## Before submitting
 
-## Review checklist
-
-Before opening a pull request, check that:
-
-- The article explains a real concept accurately.
-- Each section contributes useful information.
-- Examples and diagrams are correct and necessary.
-- Trade-offs are represented fairly.
-- References support the content and are grouped clearly.
-- Uncertainty and evidence limitations are visible.
-- No generated claim is treated as fact without human review.
-
-## Preview locally
-
-Install dependencies and run the documentation site:
-
-```bash
-python -m pip install -r requirements.txt
-mkdocs serve
-```
-
-Build the production site:
+- Check that the explanation is accurate and useful.
+- Remove repeated or unnecessary sections.
+- Verify links and examples.
+- Represent trade-offs fairly.
+- Run a strict documentation build:
 
 ```bash
 mkdocs build --strict

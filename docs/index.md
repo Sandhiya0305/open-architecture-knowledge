@@ -2,39 +2,35 @@
 
 A practical knowledge hub for software architecture, full-stack design and engineering decisions.
 
-Explore how systems are structured, how their parts work together, and what you gain or give up when choosing an approach. Explanations stay focused; diagrams and practical examples appear when they make a concept easier to understand.
+Explore how systems are structured, how their parts work together, and what you gain or give up when choosing an approach. Explanations stay focused, with diagrams and examples where they help.
 
-<div class="grid cards" markdown>
+## Architecture patterns
 
--   :material-layers-triple:{ .lg .middle } **Architecture patterns**
+Understand common ways to structure applications and define boundaries.
 
-    ---
+[Explore architecture patterns](architectures/index.md)
 
-    Understand common ways to structure applications and define boundaries.
+## Engineering decisions
 
-    [:octicons-arrow-right-24: Explore patterns](architectures/index.md)
+Compare approaches and evaluate the constraints that should shape a design.
 
--   :material-scale-balance:{ .lg .middle } **Engineering decisions**
+[Explore engineering decisions](comparisons/choosing-an-architecture.md)
 
-    ---
+## Frameworks and libraries
 
-    Compare approaches and evaluate the constraints that should shape a design.
+Browse frameworks, libraries and tools across Java, Python, Node.js/TypeScript and PHP, plus cross-stack technologies.
 
-    [:octicons-arrow-right-24: Explore decisions](comparisons/choosing-an-architecture.md)
+[Explore frameworks and tools](technologies/index.md)
 
--   :material-compass-outline:{ .lg .middle } **Foundations**
+## Foundations
 
-    ---
+Get clear on architecture terminology, quality attributes and decision-making.
 
-    Get clear on architecture terminology, quality attributes and decision-making.
-
-    [:octicons-arrow-right-24: Learn the foundations](fundamentals/architecture-vs-framework.md)
-
-</div>
+[Learn the foundations](fundamentals/architecture-vs-framework.md)
 
 ## How to use this site
 
-Start with the pattern or engineering problem closest to your work. Each article aims to explain the core idea, show how the design fits together, describe meaningful trade-offs and point to the sources used.
+Start with the pattern, engineering problem or technology closest to your work. Articles explain the core idea, show how the design fits together, describe meaningful trade-offs and link to useful sources.
 
 ## Our standard
 
@@ -44,5 +40,3 @@ Start with the pattern or engineering problem closest to your work. Each article
 - Trade-offs and limitations alongside potential benefits.
 - References grouped by source type, with direct links.
 - No forced sections: content appears only when it adds value.
-
-OAI is a curated knowledge resource, not a ranking of architectures or frameworks. A pattern is never presented as universally best.

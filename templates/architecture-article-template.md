@@ -30,29 +30,25 @@ Include implementation details, a folder structure, API shape, code sample or pr
 
 Compare relevant alternatives only when the comparison helps a reader decide. State the criteria and context; do not declare a universal winner.
 
-## Scope Note
-
-State important assumptions, evidence limitations or exclusions when relevant. Omit this section when there is nothing useful to clarify.
-
 ## Further Reading & References
 
 List only sources actually consulted and relevant to the article. Group them by type. Include a title, author or publishing organization, direct URL and publication/update date when available.
 
 ### Official Documentation
 
-- [Document title — organization](URL) — Published/updated: [date or "not stated"]
+- [Document title - organization](URL) - Published/updated: [date or "not stated"]
 
 ### Engineering Publications
 
-- [Article title — author or publication](URL) — Published: [date or "not stated"]
+- [Article title - author or publication](URL) - Published: [date or "not stated"]
 
 ### Research & Technical Reports
 
-- [Paper/report title — authors or organization](URL) — Published: [date or "not stated"]
+- [Paper/report title - authors or organization](URL) - Published: [date or "not stated"]
 
 ### Case Studies & Benchmarks
 
-- [Case study/report title — organization](URL) — Published: [date or "not stated"]
+- [Case study/report title - organization](URL) - Published: [date or "not stated"]
 
 Remove any reference groups that do not apply. Do not add a source simply to fill a group.
 
@@ -61,7 +57,7 @@ Remove any reference groups that do not apply. Do not add a source simply to fil
 ## Editorial checks (remove before publishing)
 
 - Is every factual claim supported by a source or established technical explanation?
-- Have uncertainty, assumptions and limitations been stated?
+- Have assumptions and limitations been stated where they matter?
 - Are examples and diagrams necessary and accurate?
 - Are performance claims supported by reproducible methodology?
 - Is the article concise, with no repeated or filler sections?

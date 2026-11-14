@@ -59,10 +59,6 @@ Extract a module only when there is a concrete reason for independent deployment
 
 A modular monolith can use layered organization or Clean Architecture inside its modules. It can also use events for communication without becoming a microservices system.
 
-## Scope Note
-
-Research on modular monoliths is still developing, and terminology is not fully consistent across the literature. This page focuses on practical structural characteristics rather than claiming measured performance advantages.
-
 ## Further Reading & References
 
 ### Official Documentation & Architecture Guides
