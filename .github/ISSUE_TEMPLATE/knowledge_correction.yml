@@ -1,0 +1,27 @@
+name: Knowledge correction
+description: Report an inaccurate or unsupported architecture statement.
+body:
+  - type: input
+    id: page
+    attributes:
+      label: Page URL or path
+    validations:
+      required: true
+  - type: textarea
+    id: statement
+    attributes:
+      label: Statement to review
+    validations:
+      required: true
+  - type: textarea
+    id: correction
+    attributes:
+      label: Suggested correction and reasoning
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Supporting source URL
+    validations:
+      required: true
