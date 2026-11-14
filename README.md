@@ -1,43 +1,36 @@
-# Open Architecture Knowledge
+# Open Architecture Intelligence — Knowledge
 
-A curated, evidence-linked knowledge base for software architecture styles, implementation approaches, ecosystem mappings, and engineering trends.
+The curated, evidence-aware reference for software architecture, implementation approaches, and engineering decisions.
 
-This repository is designed for developers, students, and AI assistants. Its companion research engine is [Open Architecture Intelligence](https://github.com/Sandhiya0305/open-architecture-intelligence).
+**Read the documentation website:** [Open Architecture Intelligence](https://sandhiya0305.github.io/open-architecture-knowledge/)
 
-## Initial scope
+This repository is the source of truth for the public knowledge portal. It contains the reviewed Markdown pages and the MkDocs configuration used to build the site.
 
-- Ecosystems: Node.js, Python, Java, PHP.
-- Architecture topics: Layered Architecture, Modular Monolith, Microservices, Clean Architecture, Event-Driven Architecture.
-- Content: definitions, trade-offs, decision guidance, implementation mappings, evidence records, and trend history.
+## What you'll find
 
-## Evidence policy
+- Architecture references: layered, modular monolith, microservices, Clean Architecture, and event-driven.
+- Fundamentals: architecture vocabulary, quality attributes, and decision-making.
+- Technology ecosystem guidance for Node.js, Python, Java, and PHP.
+- Comparisons and evidence policy.
+- Contribution and editorial standards.
 
-- Distinguish established principles, observed adoption signals, and measured performance.
-- Popularity, stars, downloads, and mentions are not proof of runtime performance.
-- Benchmark claims must identify workload, hardware/environment, versions, methodology, results, date, and source.
-- Missing or incomplete methodology means a performance claim remains **unverified**.
-- Link to original sources; do not copy substantial copyrighted material.
-- Date-stamp time-sensitive observations and retain historical records rather than silently rewriting history.
+## Content quality
 
-## Architecture vs technology
+OAI distinguishes architectural guidance, adoption signals, and measured performance. Popularity is not performance evidence. Benchmark claims require workload, environment, versions, methodology, results, date, and source. Generated changes require human review before merging.
 
-An architecture style or pattern describes structural decisions and constraints. A framework or library is an implementation technology. Using a framework does not automatically mean an application follows a particular architecture.
+## Local preview
 
-## Repository map
+```bash
+python -m pip install -r requirements.txt
+mkdocs serve
+```
 
-- fundamentals/: shared concepts and vocabulary.
-- architectures/: canonical architecture references.
-- technologies/: ecosystem-specific implementation guidance.
-- comparisons/: decision-oriented comparisons.
-- trends/: dated trend reports.
-- evidence/: source and claim records.
-- benchmarks/: methodology-rich benchmark records.
-- skills/: reusable AI task instructions grounded in this knowledge base.
+Build the production site:
 
-## Contribution model
+```bash
+mkdocs build --strict
+```
 
-Propose corrections or new material through pull requests. Every factual or comparative claim should carry a source or be explicitly labelled as a reasoned explanation. Generated changes require human review. See [CONTRIBUTING.md](CONTRIBUTING.md) for the evidence and review checklist.
+## Companion research engine
 
-## Status
-
-Initial knowledge foundation. Ecosystem mappings, evidence records, and trend reports will be expanded as they are researched and reviewed.
+The [open-architecture-intelligence](https://github.com/Sandhiya0305/open-architecture-intelligence) repository discovers candidate information and prepares research for review. This repository contains the curated knowledge presented to readers.
