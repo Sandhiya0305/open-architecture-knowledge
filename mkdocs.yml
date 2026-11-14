@@ -58,6 +58,7 @@ nav:
       - Quality attributes: fundamentals/quality-attributes.md
       - Architecture vs frameworks: fundamentals/architecture-vs-framework.md
       - Decision process: fundamentals/decision-process.md
+  - Reviewed research candidates: research-candidates/index.md
   - About:
       - About OAI: about/index.md
       - Contributing: about/contributing.md
