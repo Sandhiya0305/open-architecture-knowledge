@@ -1,5 +1,6 @@
 # MkDocs output
 site/
+site-mkdocs/
 
 # Python
 __pycache__/
@@ -8,6 +9,7 @@ __pycache__/
 .mypy_cache/
 .ruff_cache/
 .venv/
+.venv*/
 venv/
 *.egg-info/
 build/

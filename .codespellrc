@@ -1,0 +1,3 @@
+[codespell]
+skip = docs/research-candidates/**
+ignore-words-list = zensical,pygments,pymdownx,starlette,vertx,vert.x
