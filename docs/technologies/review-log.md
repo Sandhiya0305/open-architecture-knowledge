@@ -27,7 +27,8 @@ Run a short monthly check for major releases, support changes and licensing noti
 - [Roy Fielding's dissertation - Architectural Styles and the Design of Network-based Software Architectures](https://ics.uci.edu/~fielding/pubs/dissertation/abstract.htm)
 - [Redis licensing overview](https://redis.io/legal/licenses/)
 - [Terraform license](https://github.com/hashicorp/terraform/blob/main/LICENSE)
-- [Starlette documentation](https://www.starlette.io/)
+- [Starlette documentation](https://starlette.dev/)
+- [Uvicorn documentation](https://uvicorn.dev/) - Official ASGI server documentation.
 - [Dramatiq documentation](https://dramatiq.io/)
 - [RQ documentation](https://python-rq.org/)
 

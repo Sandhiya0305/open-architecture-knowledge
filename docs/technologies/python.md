@@ -11,7 +11,7 @@ Python is used for web applications, APIs, automation, data services and machine
 | Django | Build database-backed web applications with an integrated set of features. | [Django](https://docs.djangoproject.com/) |
 | Django REST Framework | Build Web APIs on top of Django. | [Django REST Framework](https://www.django-rest-framework.org/) |
 | FastAPI | Build APIs using Python type hints and automatic API documentation. | [FastAPI](https://fastapi.tiangolo.com/) |
-| Starlette | Lightweight ASGI toolkit and framework used directly or as a foundation for higher-level frameworks. | [Starlette](https://www.starlette.io/) |
+| Starlette | Lightweight ASGI toolkit and framework used directly or as a foundation for higher-level frameworks. | [Starlette](https://starlette.dev/) |
 | Flask | Build web applications and APIs with a lightweight framework. | [Flask](https://flask.palletsprojects.com/) |
 
 ## Data access and validation
@@ -29,7 +29,7 @@ Python is used for web applications, APIs, automation, data services and machine
 | Celery | Run distributed background tasks and scheduled jobs. | [Celery](https://docs.celeryq.dev/) |
 | Dramatiq | Process background tasks using message brokers such as RabbitMQ or Redis. | [Dramatiq](https://dramatiq.io/) |
 | RQ (Redis Queue) | Queue and process background jobs using Redis. | [RQ](https://python-rq.org/) |
-| Uvicorn | ASGI server commonly used with FastAPI and other ASGI applications. | [Uvicorn](https://www.uvicorn.org/) |
+| Uvicorn | ASGI server commonly used with FastAPI and other ASGI applications. | [Uvicorn](https://uvicorn.dev/) |
 | Gunicorn | Process manager and WSGI HTTP server for Python web applications. | [Gunicorn](https://gunicorn.org/) |
 
 ## Testing and developer tools
